@@ -6,6 +6,7 @@ var server = http.createServer(function (req, res) {   //create web server
         // set response header
         res.writeHead(200, { 'Content-Type': 'text/html' }); 
         
+        //get client ip address
         let ipClient = req.socket.remoteAddress;
         // set response content    
         res.write('<html><body><p>This is message from nodejs server.</p>' +
@@ -15,8 +16,9 @@ var server = http.createServer(function (req, res) {   //create web server
     }
 });
 
-server.listen(8080); //6 - listen for any incoming requests
+server.listen(8080); //listen on port 8080
 
+//logs :
 console.log('Server starting time: ' + new Date);
 console.log('Author: Mateusz Sobczyk');
 console.log('Node.js web server is running at port: 8080');
