@@ -1,0 +1,8 @@
+{
+    "dependencies": {
+        "http": "*"
+    },
+    "scripts": {
+        "start": "node server.js"
+    }
+}
